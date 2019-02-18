@@ -1,5 +1,13 @@
 #!/usr/bin/python
 
+# Notifier
+# by Mark Baldwin
+#
+# Python script to create a message gateway
+# using JSON objects to send either an email 
+# or push notification. Can be used as a module 
+# or a CLI script.
+
 import ConfigParser, sys, getopt, logging, smtplib, datetime, pycurl, json, os.path
 from StringIO import StringIO
 
@@ -123,7 +131,7 @@ def getArgs(argv, emailObj):
   print opts
   return emailObj
 
-def sendNotification():
+def sendMessage():
   # check if we need to send an email
   if config.get('notifier','email'):
     sendEmail( emailObj )
@@ -173,4 +181,4 @@ logging.basicConfig(filename=config.get('notifier','log_file'), level=logging.DE
 # If executed as a script
 if __name__ == '__main__':
   emailObj = getArgs( sys.argv[1:], emailObj )
-  sendNotification()
+  sendMessage()
