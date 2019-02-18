@@ -1,4 +1,4 @@
-# notifier
+# Notifier
 
 Notifier is a Python messaging gateway, that can be used as a Python module or standalone CLI script. Messages can be sent to either SMTP email server or the notification service [PushOver](https://pushover.net/)
 
