@@ -5,7 +5,18 @@ Notifier is a Python messaging gateway, that can be used as a Python module or s
 
 ## Installation 
 
-Download and unpack [notifier.py](notifier.py) to the `/usr/local/bin` folder and copy [etc/notifier.conf](etc/notifier.conf) to the `/etc/` directory
+Download and unpack [notifier.py](notifier.py) to the `/usr/local/bin` folder.
+
+```bash
+cp notifier.py /usr/local/bin
+chmod 755 /usr/local/bin/notifier.py
+```
+
+Copy [etc/notifier.conf](etc/notifier.conf) to the `/etc/` directory
+
+```bash
+cp notifier.conf /etc
+```
 
 ## Configuration
 
